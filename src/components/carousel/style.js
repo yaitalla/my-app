@@ -1,5 +1,5 @@
 import styled, {keyframes} from 'styled-components';
-
+import tetris from '../../images/tetrisAnimation.gif';
 // const carouselAnim = keyframes`
     
 //     27.5%, 45% {
@@ -146,6 +146,33 @@ export const CardFigure = styled.figure`
     perspective: 1000px;
     transform-origin: center;
     transform: scale(1.5);
+`;
+export const Insider = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    align-items: center;
+    justify-content: space-around;
+`;
+export const TetrisImg = styled.img`
+    height: 100%;
+    position: absolute;
+    opacity: 40%;
+`;
+export const MapImg = styled.img`
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 70%;
+`;
+export const ReactTetrisTxt = styled.h2`
+    z-index: 2;
+    text-shadow: 4px 4px 4px black;
+`;
+export const MultiplayerTxt = styled.h6`
+    z-index: 2;
+    text-shadow: 2px 2px 4px black;
 `;
 
 export const Item = styled.div`

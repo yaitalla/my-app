@@ -1,5 +1,10 @@
 import React from 'react';
-import { Wrap, Box, Item, CardFigure, Left, Right } from './style';
+import { Wrap, Box, Item, CardFigure, Left, Right, Insider, TetrisImg,
+     ReactTetrisTxt, MultiplayerTxt, MapImg
+ } from './style';
+import tetris from '../../images/tetrisAnimation.gif';
+import driver from '../../images/driver.gif';
+import cv from '../../images/cv.png';
 
 const newer = (index, anim) => {
     switch ( index ){
@@ -53,13 +58,26 @@ const Carousel = () => {
             <CardFigure>
                 <Box id={'carouselbox'} className={'one'}>
                     <Item>
-                        <h1>1</h1>
+                        <Insider>
+                            <ReactTetrisTxt>React Tetris</ReactTetrisTxt>
+                            <MultiplayerTxt>realtime multiplayer</MultiplayerTxt>
+                            <TetrisImg src={tetris} />
+                        </Insider>
+                        
                     </Item>
                     <Item>
-                        <h1>2</h1>
+                        <Insider>
+                            <ReactTetrisTxt>Driver GPS</ReactTetrisTxt>
+                            <MultiplayerTxt>realtime tracking</MultiplayerTxt>
+                            <MapImg src={driver} />
+                        </Insider>
                     </Item>
                     <Item>
-                        <h1>3</h1>
+                        <Insider>
+                            <ReactTetrisTxt>CV Template</ReactTetrisTxt>
+                            <MultiplayerTxt>bootstrap</MultiplayerTxt>
+                            <MapImg src={cv} />
+                        </Insider>
                     </Item>
                 </Box>
             </CardFigure>
