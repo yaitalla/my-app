@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Navbar from './components/navbar';
+import AboutSection from './containers/about';
+import PortfolioSection from './containers/portfolio';
+import ContactSection from './containers/contact';
+
+const Wrap = styled.div`
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(40,44,52,1) 0%, rgba(97,218,251,1) 100%);
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrap data-spy={"scroll"} data-target={"#yasNavbar"}>
+      <Navbar/>
+      <AboutSection/>
+      <PortfolioSection/>
+      <ContactSection/>
+    </Wrap>
   );
 }
 
