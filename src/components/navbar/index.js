@@ -49,7 +49,7 @@ const Navbar = () => {
         hoverLink();
     });
     return (
-        <NavWrap className={"navbar navbar-default"} data-spy={"affix"}>
+        <NavWrap className={""} data-spy={"affix"}>
             <LeftHead >
                 <Logo className={"navbar-brand"}
                     href={"https://www.linkedin.com/company/whis-digital-consulting/about/"}

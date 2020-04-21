@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FormWrap, FormRow, FormInput, FormTxtArea, SubmitBtn } from './style';
+import { NewInput, TxtArea, EaseDiv, FormDiv, SubmitDiv, InputBtn } from './style';
 import axios from 'axios';
+import '../../css/index.css'
 
 const ContactForm = () => {
     const [name, setName] = useState('');
@@ -40,20 +41,17 @@ const ContactForm = () => {
         
     }
     return (
-        <FormWrap onSubmit={sendData} method="post">
-            <FormRow>
-                <FormInput onChange={updateName} placeholder={'   Enter your name'} ></FormInput>
-            </FormRow>
-            <FormRow>
-                <FormInput onChange={updateEmail} placeholder={'   Enter your email'} ></FormInput>
-            </FormRow>
-            <FormRow>
-                <FormTxtArea onChange={updateMsg} placeholder={'   ...message'} ></FormTxtArea>
-            </FormRow>
-            <FormRow>
-                <SubmitBtn type={'submit'}  >Submit</SubmitBtn>
-            </FormRow>
-        </FormWrap>
+        <FormDiv>
+            <form onSubmit={sendData} method="post">
+                    <NewInput onChange={updateName}  className={"name"} placeholder={"Name"}/>
+                    <NewInput onChange={updateEmail} className={"email"} placeholder={"Email"}/>
+                    <TxtArea onChange={updateMsg} className={"name"} placeholder={"Message"}/>
+                <SubmitDiv className={"submit"} >
+                    <InputBtn type={"submit"} value={"SEND"} />
+                    <EaseDiv className={"ease"}  />
+                </SubmitDiv>
+            </form>
+        </FormDiv>
     )
 }
 

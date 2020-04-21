@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const NavWrap = styled.nav`
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-content: center;
-    z-index:9999;
+    justify-content: center;
+    z-index:99;
     margin-bottom:0px;
     top: 0;
     width: 100%;
@@ -14,12 +15,11 @@ export const NavWrap = styled.nav`
 `;
 export const Logo = styled.a`
     display: flex;
-    border-radius: 50%;
-    width: 10vw;
     align-content: center;
     justify-content: center;
     align-items: center;
-    height: 6vh;
+    height: 100%;
+    width: 100%;
 `;
 export const UlNav = styled.ul`
     display: flex;
@@ -31,18 +31,18 @@ export const UlNav = styled.ul`
     justify-content: flex-end;
     margin:0px;
     position: relative;
-    margin-right: -15px;
 `;
 
 export const Li = styled.li`
     text-decoration: none;
     min-width: 60px;
+    font-size: 20px;
     list-style: none;
     &:hover {
         color: white;
     }
     color: white;
-    text-shadow: 0 0 4px black;
+    text-shadow: 1px 0 4px black;
 
 `;
 
@@ -90,7 +90,6 @@ export const A = styled.a`
 `;
 export const LeftHead = styled.div`
     display: flex;
-    position: relative;
 `;
 export const MidHead = styled.div`
     height: 100%;
@@ -99,11 +98,10 @@ export const MidHead = styled.div`
 `;
 export const RightHead = styled.div`
     display: flex;
-    position: relative;
+    overfolw: hidden;
     min-width: 300px;
 `;
 export const Img = styled.img`
     transform-style: preserve-3d;
     height: 10vh;
-    animation: none;
 `;

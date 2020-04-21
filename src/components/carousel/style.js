@@ -1,5 +1,4 @@
 import styled, {keyframes} from 'styled-components';
-import tetris from '../../images/tetrisAnimation.gif';
 // const carouselAnim = keyframes`
     
 //     27.5%, 45% {
@@ -132,7 +131,7 @@ export const Wrap = styled.div`
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 50%;
 `;
 
 export const CardFigure = styled.figure`

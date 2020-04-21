@@ -4,11 +4,11 @@ import Navbar from './components/navbar';
 import AboutSection from './containers/about';
 import PortfolioSection from './containers/portfolio';
 import ContactSection from './containers/contact';
+import FooterSection from './containers/footer';
 
 const Wrap = styled.div`
     position: relative;
-    width: 100%;
-    height: 100%;
+    min-width: 900px;
     background: linear-gradient(180deg, rgba(40,44,52,1) 0%, rgba(97,218,251,1) 100%);
 `;
 
@@ -19,6 +19,7 @@ function App() {
       <AboutSection/>
       <PortfolioSection/>
       <ContactSection/>
+      <FooterSection/>
     </Wrap>
   );
 }

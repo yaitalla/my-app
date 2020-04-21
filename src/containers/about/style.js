@@ -47,7 +47,6 @@ export const RightSide = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 0;
 `;
 export const YassinePic = styled.img`
     position: relative;
