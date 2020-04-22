@@ -26,17 +26,15 @@ const ContactForm = () => {
         event.preventDefault();
         if (emailCheck) {
             console.log('emailCheck: ', emailCheck)
-            document.getElementById('emailAlert').classList.add('hidden')
-            document.getElementById('emailAlert').classList.remove('visible')
+            
             axios.post("http://localhost:4000/api/ftp/sendForm", data).then((res) => {
                 console.log('server response: ',res.data)
             }).catch((err) => {
                 console.log('YASLOG', err)
             });
         } else {
-            // console.log('emailCheck: ', emailCheck)
-            document.getElementById('emailAlert').classList.add('visible')
-            document.getElementById('emailAlert').classList.remove('hidden')
+            console.log('emailCheck: ', emailCheck)
+            
         }
         
     }

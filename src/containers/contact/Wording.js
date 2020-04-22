@@ -6,10 +6,10 @@ const Wording = () => {
         <WordingWrap>
            <H1>Contact</H1>
            <H3>Got a project in mind? Lets get in touch!</H3>
-            <HiddenAlert id={'emailAlert'} className={'hidden'} >
+            {/* <HiddenAlert id={'emailAlert'} className={'hidden'} >
                 <HiddenMessage>please enter a valid email</HiddenMessage>
                 <HiddenMessage className={'alert'} >/!\</HiddenMessage>
-            </HiddenAlert>
+            </HiddenAlert> */}
         </WordingWrap>
     )
 }

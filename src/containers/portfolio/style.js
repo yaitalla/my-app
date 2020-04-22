@@ -5,6 +5,7 @@ export const Wrap = styled.section`
     min-height:800px;
     height: 100vh;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
 `;
