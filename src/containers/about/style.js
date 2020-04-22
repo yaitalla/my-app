@@ -13,7 +13,7 @@ const textRight = keyframes`
         opacity: 1;
     }
 `;
-const yassineLeft = keyframes`
+const animationLeft = keyframes`
     0% {
         transform: translate(160%, 0%);
     }
@@ -55,7 +55,7 @@ export const YassinePic = styled.img`
     height: 300px;
     transform: translate(160%, 0%);
     overflow: hidden;
-    animation: 0.6s ${yassineLeft} linear forwards;
+    animation: 0.6s ${animationLeft} linear forwards;
     animation-iteration-count: 1;
     padding: 0;
 `;

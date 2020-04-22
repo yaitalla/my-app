@@ -13,6 +13,7 @@ const Wrap = styled.div`
 `;
 
 function App() {
+  // showTime()
   return (
     <Wrap data-spy={"scroll"} data-target={"#yasNavbar"}>
       <Navbar/>

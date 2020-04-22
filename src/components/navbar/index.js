@@ -47,7 +47,8 @@ const hoverLink = () => {
 const Navbar = () => {
     useEffect(() => {
         hoverLink();
-    });
+});
+    
     return (
         <NavWrap className={""} data-spy={"affix"}>
             <LeftHead >

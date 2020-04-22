@@ -24,7 +24,7 @@ export const LeftSection = styled.div`
     width: 90%;
     height: 40%;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
 `;
 export const RightSection = styled.div`
     display: flex;
