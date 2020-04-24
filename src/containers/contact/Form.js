@@ -8,7 +8,6 @@ const ContactForm = () => {
     const [time, setTime] = useState(0)
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [emailCheck, setEmailCheck] = useState(false);
     const [message, setMessage] = useState('');
     
     const checkEmail = (str) => {
@@ -18,14 +17,11 @@ const ContactForm = () => {
     const updateName = (event) => { setName(event.target.value) }
     const updateEmail = (event) => {
         setEmail(event.target.value)
-        setEmailCheck(checkEmail(email))
-        // console.log('update: ', emailCheck)
     }
     const updateMsg = (event) => { setMessage(event.target.value) }
     
     const sendData = (event) => {
         event.preventDefault();
-        console.log('emailCheck: ', emailCheck)
         const template_params = {
             "name": name,
             "email": email,
@@ -37,9 +33,14 @@ const ContactForm = () => {
          }
          const service_id = "default_service";
          const template_id = "yassine.com_automail";
-         if (emailCheck){
+         if (name.length > 0 && email.length > 0 && message.length > 0){
             window.emailjs.send(service_id, template_id, template_params);
-            console.log("email sent")
+            console.log("message sent")
+            setName('');
+            setEmail('');
+            setMessage('');
+         } else {
+             console.log("blank input: message not sent")
          }
     }
 
@@ -66,9 +67,9 @@ const ContactForm = () => {
     return (
         <FormDiv>
             <form onSubmit={sendData} method="post">
-                    <NewInput onChange={updateName}  className={"name"} placeholder={"Name"}/>
-                    <NewInput onChange={updateEmail} className={"email"} placeholder={"Email"}/>
-                    <TxtArea onChange={updateMsg} className={"name"} placeholder={"Message"}/>
+                    <NewInput onChange={updateName} value={name}  className={"name"} placeholder={"Name"}/>
+                    <NewInput onChange={updateEmail} value={email} className={"email"} placeholder={"Email"}/>
+                    <TxtArea onChange={updateMsg} value={message} className={"name"} placeholder={"Message"}/>
                 <SubmitDiv className={"submit"} >
                     <InputBtn type={"submit"} value={"SEND"} />
                     <EaseDiv className={"ease"}  />

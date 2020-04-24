@@ -1,5 +1,5 @@
 import React from 'react';
-import { WordingWrap, H1, H3, HiddenAlert, HiddenMessage } from './style';
+import { WordingWrap, H1, H3 } from './style';
 
 const Wording = () => {
     return (
